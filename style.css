@@ -1,20 +1,19 @@
 
-/* Simple responsive style inspired by educational article layouts */
 :root{--accent:#0b6efd;--muted:#6b7280;--bg:#fbfbfd}
 *{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#111;background:var(--bg)}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:0; color:#111;background:var(--bg)}
 .container{max-width:1000px;margin:0 auto;padding:20px}
 .site-header{background:#fff;border-bottom:1px solid #e6e9ee;position:sticky;top:0;z-index:50}
-.site-header .container{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:20px;margin:12px 0;color:var(--accent)}
+.header-row{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;margin:12px 0;color:var(--accent);font-weight:800}
 .nav a{margin:0 8px;color:#334155;text-decoration:none;font-weight:600}
 .hero{position:relative;margin-bottom:20px}
 .hero-img{width:100%;display:block;border-radius:8px}
-.hero-text{position:absolute;left:30px;top:40px;color:#07203b;background:rgba(255,255,255,0.85);padding:20px;border-radius:8px;max-width:45%}
+.hero-text{position:absolute;left:30px;top:40px;color:#07203b;background:rgba(255,255,255,0.92);padding:20px;border-radius:8px;max-width:45%}
 .cta{display:inline-block;margin-top:10px;padding:10px 16px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px}
 .card{background:#fff;padding:18px;margin:18px 0;border-radius:10px;box-shadow:0 6px 18px rgba(15,15,30,0.03)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.pdf-card{border:1px dashed #e2e8f0;padding:12px;border-radius:8px}
+.pdf-card{padding:12px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid #eef2ff}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .jobs-grid{display:flex;gap:12px;flex-wrap:wrap}
 .job-card{flex:1;padding:12px;border-radius:8px;border-left:4px solid var(--accent);background:#fff}
@@ -23,4 +22,20 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica
 .site-footer{padding:20px 0;border-top:1px solid #e6e9ee;background:#fff;margin-top:30px;text-align:center;color:var(--muted)}
 form input{display:block;margin:8px 0;padding:10px;border-radius:6px;border:1px solid #d1d5db;width:100%;max-width:420px}
 form button{padding:10px 14px;border-radius:6px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+
+/* PDF link styles (colorful badges) */
+.pdf-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg,#0ea5e9,#0369a1);
+  box-shadow: 0 6px 18px rgba(3,105,161,0.12);
+}
+.pdf-link:hover { opacity: 0.95; transform: translateY(-2px); }
+.pdf-link:focus { outline: 3px solid rgba(11, 110, 253, 0.16); outline-offset: 3px; }
+
 @media(max-width:720px){.hero-text{position:static;max-width:100%;margin-top:-80px;background:rgba(255,255,255,0.95)}.two-col{grid-template-columns:1fr}}
